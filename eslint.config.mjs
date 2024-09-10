@@ -5,8 +5,9 @@ import pluginReact from 'eslint-plugin-react';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 
 export default [
-  { files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'] },
-  { languageOptions: { globals: globals.browser } },
+  { ignores: ['dist'] },
+  { files: ['**/*.{mjs,cjs,ts,jsx,tsx}'] },
+  { languageOptions: { ecmaVersion: 2020, globals: globals.browser } },
   pluginJs.configs.recommended,
   ...tseslint.configs.strict,
   pluginReact.configs.flat.all,
@@ -15,6 +16,8 @@ export default [
     rules: {
       'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
       'react/jsx-indent': 'off',
+      'react/jsx-no-literals': 'off',
+      'react/jsx-max-depth': [1, { max: 3 }],
     },
   },
 ];
