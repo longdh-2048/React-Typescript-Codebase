@@ -1,28 +1,27 @@
 import React from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
-import './App.css';
 
 function App() {
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" rel="noreferrer" target="_blank">
-          <img alt="Vite logo" className="logo" src={viteLogo} />
+    <div className="flex flex-col items-center justify-center h-screen px-4">
+      <h1 className="text-4xl font-bold text-gray-800 mb-4">Coming Soon</h1>
+      <p className="text-gray-600 text-lg mb-8">
+        We&apos;re working hard to bring you an amazing new website. Stay tuned!
+      </p>
+      <div className="flex space-x-4">
+        <a
+          className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full shadow-lg transition duration-300"
+          href="#"
+        >
+          Subscribe
         </a>
-        <a href="https://react.dev" rel="noreferrer" target="_blank">
-          <img alt="React logo" className="logo react" src={reactLogo} />
+        <a
+          className="bg-gray-300 hover:bg-gray-400 text-gray-800 py-2 px-4 rounded-full shadow-lg transition duration-300"
+          href="#"
+        >
+          Learn More
         </a>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button type="button">count is</button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
-    </>
+    </div>
   );
 }
 
